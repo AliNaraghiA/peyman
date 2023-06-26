@@ -46,18 +46,22 @@
         </div>
       </div>
       <div class="conversation d-flex justify-content-between">
-        <form action="#">
-          <h2>Start a Conversation</h2>
+              <!-- dynamic -->
+              <div>
+               <form @submit.prevent="submitForm">
+                <h2>Start a Conversation</h2>
           <p>
             Let us know your questions and we'll get back to you as soon as
             possible.
           </p>
           <div class="d-flex justify-content-between">
-            <input type="text" placeholder="Name" />
-            <input type="email" placeholder="Email *" />
+            <input type="text" name="name" v-model="name"  placeholder="Name" />
+            <input type="email" name="email" v-model="email"  placeholder="Email  *" />
           </div>
-          <textarea placeholder="Message *" rows="3"></textarea>
-          <el-upload
+          <textarea  name="message" v-model="message"  placeholder="Message  *" rows="3"></textarea>   
+<!--           <el-upload
+           ref="attachment"
+           @change="handleAttachment"
             class="upload-demo"
             drag
             action="https://jsonplaceholder.typicode.com/posts/"
@@ -66,17 +70,26 @@
             :file-list="fileList"
             multiple
           >
-            <div class="el-upload__text">Drop file here or CLICK TO UPLOAD</div>
+          <div class="el-upload__text"  >Drop file here or CLICK TO UPLOAD</div>
           </el-upload>
-          <div class="size">Attachment cannot exceed <span> 5 MB </span></div>
+              <div class="size"> Attachment cannot exceed <span> 5 MB </span></div>  -->
+
+              
+
+
+              <input type="file" ref="attachment" @change="handleAttachment" />
+                     <div class="size">Attachment cannot exceed <span> 5 MB </span></div> 
           <button type="submit" class="effectBtn">
             <span> SEND </span>
           </button>
         </form>
+        <div style='color: red; ,font-size:flex-direction: ;;' v-if="successMessage" class="success-message">{{ successMessage }}</div>
+         </div>
         <div class="animation">
           <Lines myVh="550" myVw="1900" />
         </div>
       </div>
+    
       <Footer lang="en" />
     </div>
     <div class="faContactUs irancell" v-else>
@@ -123,21 +136,29 @@
         </div>
       </div>
       <div class="conversation d-flex justify-content-between">
-        <form action="#">
+               <!-- dynamic -->
+               <div>
+               <form @submit.prevent="submitForm">
           <h2>فرم تماس باما</h2>
           <p>
             سوالات خود را با ما در میان بگذارید و ما در اسرع وقت با شما تماس
             خواهیم گرفت.
           </p>
           <div class="d-flex justify-content-between">
-            <input type="text" placeholder="نام" />
-            <input type="email" placeholder="ایمیل  *" />
+            <input type="text" name="name" v-model="name"  placeholder="نام" />
+            <input type="email" name="email" v-model="email"  placeholder="ایمیل  *" />
           </div>
-          <textarea placeholder="پیام شما  *" rows="3"></textarea>
+          <textarea  name="message" v-model="message"  placeholder="پیام شما  *" rows="3"></textarea>
+          <!--  -->
+          <input type="file" ref="attachment" @change="handleAttachment" />
+                     <div class="size">Attachment cannot exceed <span> 5 MB </span></div> 
+          <!--  -->
           <button type="submit" class="effectBtn">
             <span> ارسال </span>
           </button>
         </form>
+        <div style='color: red; ,font-size:flex-direction: ;;' v-if="successMessage" class="success-message">{{ successMessage }}</div>
+         </div>
         <div class="animation">
           <Lines myVh="550" myVw="1900" />
         </div>
@@ -149,27 +170,61 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
+   import axios from 'axios'
+   export default {
+    data() {
+     return {
       language: "",
-    };
-  },
-  mounted() {
+       name: '',
+       email: '',
+       message: '',
+       attachment: null,
+       successMessage: '',
+     }
+   },
+   methods: {
+    change() {
+        this.$store.commit("change");
+      },
+     handleAttachment(event) {
+       this.attachment = event.target.files[0]
+     },
+     async submitForm() {
+       const apiUrl = 'https://backend.ravakdemo.ir/wp-json/contact-form-7/v1/contact-forms/387/feedback'
+ 
+       const formData = new FormData()
+       formData.append('your-name', this.name)
+       formData.append('your-email', this.email)
+       formData.append('your-message', this.message)
+       formData.append('your-file', this.attachment)
+ 
+       try {
+         const response = await axios.post(apiUrl, formData, {
+           headers: { 'Content-Type': 'multipart/form-data' },
+         })
+         if (response.data.status === 'mail_sent') {
+           this.successMessage = 'Your message was sent successfully!'
+         } else {
+           this.successMessage = 'Failed to send your message. Please try again.'
+         }
+       } catch (error) {
+         console.error(error)
+         this.successMessage = 'Failed to send your message. Please try again.'
+       }
+     },
+   }, 
+   mounted() {
     this.language = this.$store.state.lang;
   },
-  methods: {
-    change() {
-      this.$store.commit("change");
+   watch: {
+      "$store.state.lang"() {
+        this.language = this.$store.state.lang;
+      },
     },
-  },
-  watch: {
-    "$store.state.lang"() {
-      this.language = this.$store.state.lang;
-    },
-  },
-};
+ };
 </script>
 
-<style>
+<style >
+
+
 </style>

@@ -35,7 +35,7 @@
                 <h5 class="title">{{ item.title }}</h5>
                 <p class="text">{{ item.text }}</p>
               </div>
-              <router-link to="industrial/1" class="effectBtn">
+              <router-link :to="`/industrial/${item.id}`"   class="effectBtn">
                 <span>مشاهده</span>
               </router-link>
             </div>
@@ -51,7 +51,7 @@
                 <h5 class="title">{{ item.title }}</h5>
                 <p class="text">{{ item.text }}</p>
               </div>
-              <router-link to="industrial/1" class="effectBtn">
+              <router-link :to="`/industrial/${item.id}`"  class="effectBtn">
                 <span>مشاهده</span>
               </router-link>
             </div>
@@ -78,25 +78,25 @@ export default {
         {
           title: "میلگرد",
           text: "میله آلومینیوم (میلگرد آلومینیومی) یک میله‌ی فلزی نقره با چگالی پایین است. این فلز در صنایع مختلف کاربردهای زیادی دارد. عنصر اصلی این میله آلومینیوم است؛ اما بر اساس ویژگی‌های موردنیاز می‌توان آلیاژهای مختلفی از آن تولید کرد",
-          id: 1,
+          id: "bar",
           image: "/images/industrial1.png",
         },
         {
           title: "تسمه",
           text: "یک شمش توپر آلومینیومی است که در ساخت دستگیره و یراق مختلف استفاده میشود. این تسمه آلومینیوم تحت پرس فرم میگیرد و در دوحالت ساده و سه خط در بازار عرضه میگردد.",
-          id: 2,
+          id: "belt",
           image: "/images/industrial2.png",
         },
         {
           title: "لوله",
           text: "امروزه لوله آلومینیومی و ورق آلومینیوم یکی از پر کاربردترین تجهیزاتی باشند که در صنایع بزرگ و کوچک و سبک و سنگین مورد استفاده قرار می­‌گیرند. ضخامت و اندازه­‌ی لوله آلومینیومی بر اساس کاربرد آن­‌ها تعیین می‌­گردد.",
-          id: 3,
+          id: "pipe",
           image: "/images/industrial3.png",
         },
         {
           title: "شش پر",
           text: "منظور از شش پر آلومینیوم، همان شش ضلعی است که با استفاده از آلیاژ های مورد نظر شما به صورت تو پر و اکسترود شده تولید می شوند که در اندازه های مختلف و با توجه به سفارش و نیاز شما به شما عرضه می شوند.",
-          id: 4,
+          id: "hexagonal-kelly",
           image: "/images/industrial3.png",
         },
       ],

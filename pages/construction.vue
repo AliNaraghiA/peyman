@@ -26,27 +26,29 @@
         <Lines myVw="1920" myVh="100" />
       </div>
       <div class="categories d-flex justify-content-between">
-        <div @click="category = 1" :class="{ active: category == 1 }">
-          سیستم کشویی نرمال( سری ۶۰)
-        </div>
-        <div @click="category = 2" :class="{ active: category == 2 }">
-          سیستم لولایی نرمال( سری ۴۷)
-        </div>
-        <div @click="category = 3" :class="{ active: category == 3 }">
-          سیستم توری پلیسه ای
-        </div>
-        <div @click="category = 4" :class="{ active: category == 4 }">سایر</div>
+      <div @click="category = 1" :class="{ active: category == 1 }">
+        سیستم کشویی نرمال( سری ۶۰)
       </div>
-      <div class="items d-flex justify-content-between flex-wrap">
-        <div class="item" v-for="item in 16" :key="item">
+      <div @click="category = 2" :class="{ active: category == 2 }">
+        سیستم لولایی نرمال( سری ۴۷)
+      </div>
+      <div @click="category = 3" :class="{ active: category == 3 }">
+        سیستم توری پلیسه ای
+      </div>
+      <div @click="category = 4" :class="{ active: category == 4 }">سایر</div>
+    </div>
+    <div v-if="filteredConstructions.length" class="items d-flex justify-content-between flex-wrap" >
+      <div v-for="construction in filteredConstructions" :key="construction.databaseId"  >
+        <div v-for="(item, index) in construction.acfconstructions.repeater" :key="index"  class="item">
           <div class="whiteDiv">
-            <img src="/images/construction.jpg" alt="" />
+          <img :src="item.image.sourceUrl" :alt="item.image.altText" />
           </div>
-          <h5 class="title">PS 500</h5>
-          <div class="name">پروفیل سپری کشویی</div>
-          <div class="weight mont">0.816 kg/m</div>
+          <h5 class="title">{{ item.title }}</h5>
+          <div class="name">{{ item.name }}</div>
+          <div class="weight mont">{{ item.weight }}</div>
         </div>
       </div>
+    </div>
       <div class="footer">
         <Footer lang="fa" />
       </div>
@@ -54,16 +56,57 @@
     <MouseEffect />
   </div>
 </template>
-        
+
+
 <script>
-export default {
+import gql from 'graphql-tag';
+export default{
   data() {
-    return {
-      language: "",
-      category: 1,
-    };
-  },
-  mounted() {
+return {
+  language: "",
+  category: 1,
+  constructions: [],
+}
+
+},
+async asyncData({ app }) {
+const query = gql`
+  query Constructions {
+    constructions {
+      nodes {
+        desiredSlug
+        databaseId
+        slug
+        acfconstructions {
+          category
+          repeater {
+            image {
+              altText
+              sourceUrl
+            }
+            name
+            weight
+            title
+          }
+        }
+      }
+    }
+  }
+`
+
+const { data } = await app.apolloProvider.defaultClient.query({ query })
+
+return {
+  constructions: data.constructions.nodes,
+}
+},
+computed: {
+filteredConstructions() {
+  return this.constructions.filter(construction => construction.acfconstructions.category == this.category)
+},
+},
+//lanG
+mounted() {
     this.language = this.$store.state.lang;
   },
   methods: {
@@ -76,6 +119,6 @@ export default {
       this.language = this.$store.state.lang;
     },
   },
+
 };
 </script>
-        

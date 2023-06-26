@@ -150,7 +150,6 @@
       margin-bottom: 180px;
       position: relative;
       padding-top: 250px;
-
       &::before {
         content: "";
         width: 864px;
@@ -183,8 +182,8 @@
         max-width: 664px;
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 32px;
+        font-size: 16px;
+        line-height: 30px;
 
         color: #ffffff;
       }
@@ -255,9 +254,8 @@
             }
             .text {
               font-weight: 400;
-              font-size: 18px;
-              line-height: 32px;
-
+              font-size: 16px;
+              line-height: 30px;
               max-width: 552px;
               color: #ffffff;
             }
@@ -387,22 +385,34 @@
   .blogs {
     .faBlogs {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 80px;
         h3 {
           font-size: 20px;
         }
         h1 {
-          font-size: 30px;
+          font-size: 20px;
+          line-height: 35px;
           margin: 0px;
         }
         p {
-          font-size: 15px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .scroll {
+        .scrollIcon {
+          height: 40px;
+          width: 20px;
+          padding: 0px 6px;
+        }
+        .scrollTitle {
+          font-size: 12px;
         }
       }
       .scroll,
       .blogList {
-        padding: 0px 20px;
+        padding: 0px 50px;
       }
       .blogList {
         .blog {
@@ -410,10 +420,11 @@
             font-size: 20px !important;
           }
           .text {
-            font-size: 12px !important;
+            font-size: 10px !important;
+            line-height: 20px;
           }
           .number {
-            font-size: 200px !important;
+            font-size: 130px !important;
           }
           img {
             width: 100%;
@@ -430,22 +441,25 @@
     }
     .enBlogs {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 80px;
         h3 {
           font-size: 20px;
+          line-height: 35px;
         }
         h1 {
-          font-size: 30px;
+          font-size: 20px;
+          line-height: 35px;
           margin: 0px;
         }
         p {
-          font-size: 15px;
+          font-size: 14px;
+          line-height: 20px;
         }
       }
       .scroll,
       .blogList {
-        padding: 0px 20px;
+        padding: 0px 50px;
       }
       .blogList {
         .blog {
@@ -453,10 +467,10 @@
             font-size: 20px !important;
           }
           .text {
-            font-size: 12px !important;
+            font-size: 10px !important;
           }
           .number {
-            font-size: 200px !important;
+            font-size: 130px !important;
           }
           img {
             width: 100%;

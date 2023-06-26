@@ -1,0 +1,203 @@
+.gallery {
+  background: #0c0f1c;
+  overflow-x: hidden;
+  .enGallery {
+    * {
+      z-index: 8;
+      position: relative;
+    }
+    .topDiv {
+      padding: 0px 260px;
+      margin-bottom: 180px;
+      position: relative;
+      padding-top: 250px;
+
+      &::before {
+        content: "";
+        width: 864px;
+        height: 864px;
+        display: inline-block;
+        position: absolute;
+        left: -500px;
+        bottom: -300px;
+        z-index: -1;
+        background: rgba(0, 129, 255, 0.63);
+        filter: blur(200px);
+      }
+      h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        color: #ffffff;
+        margin-bottom: 47px;
+      }
+      p {
+        max-width: 664px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 45px;
+
+        color: #ffffff;
+      }
+    }
+    .galleryList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      padding: 260px;
+      padding-top: 0px;
+      .imageDiv {
+        width: 29%;
+        img {
+          width: 100%;
+        }
+        .text {
+          background: #1a407a;
+          width: 100%;
+          padding: 34px;
+          text-align: center;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  .faGallery {
+    * {
+      z-index: 8;
+      position: relative;
+      direction: rtl;
+      text-align: right;
+    }
+    .topDiv {
+      padding: 0px 260px;
+      margin-bottom: 180px;
+      position: relative;
+      padding-top: 250px;
+      &::before {
+        content: "";
+        width: 864px;
+        height: 864px;
+        display: inline-block;
+        position: absolute;
+        right: -200px;
+        bottom: -300px;
+        z-index: -1;
+        background: rgba(0, 129, 255, 0.63);
+        filter: blur(200px);
+      }
+      h3 {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 40px;
+        color: #ffffff;
+        margin-bottom: 47px;
+      }
+      p {
+        max-width: 664px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 30px;
+
+        color: #ffffff;
+      }
+    }
+    .galleryList {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      justify-content: center;
+      padding: 260px;
+      padding-top: 0px;
+      .imageDiv {
+        width: 29%;
+        img {
+          width: 100%;
+        }
+        .text {
+          background: #1a407a;
+          width: 100%;
+          padding: 34px;
+          text-align: center;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 20px;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1679px) {
+  .gallery {
+    .enGallery {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .galleryList {
+        padding-right: 100px;
+        padding-left: 100px;
+      }
+    }
+    .faGallery {
+      .topDiv {
+        padding: 250px 100px 0px 100px;
+      }
+      .galleryList {
+        padding-right: 100px;
+        padding-left: 100px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .gallery {
+    .enGallery {
+      .galleryList {
+        .imageDiv {
+          width: 45%;
+        }
+      }
+    }
+    .faGallery {
+      .galleryList {
+        .imageDiv {
+          width: 45%;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .gallery {
+    .enGallery {
+      .topDiv {
+        padding: 170px 50px 0px 50px;
+      }
+      .galleryList {
+        padding-right: 50px;
+        padding-left: 50px;
+        .imageDiv {
+          width: 100%;
+        }
+      }
+    }
+    .faGallery {
+      .topDiv {
+        padding: 170px 50px 0px 50px;
+      }
+      .galleryList {
+        padding-right: 50px;
+        padding-left: 50px;
+        .imageDiv {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

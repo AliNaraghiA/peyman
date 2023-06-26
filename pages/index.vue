@@ -154,7 +154,7 @@
           v-show="video"
         />
       </div>
-      <div class="news">
+       <div class="news">
         <div class="newsHead">
           <div class="d-flex justify-content-between">
             <div class="faNew">
@@ -175,37 +175,114 @@
             <span> All News </span>
           </div>
         </div>
-        <div class="newsList">
+         <div class="newsList">
           <div
             class="d-flex justify-content-between new"
-            v-for="item in faNewsItems"
-            :key="item.id"
-            :id="`new${item.id}`"
+            v-if="posts && posts"
+            v-for="post in posts"
+            :key="post.id"
+            :id="`new${post.node.databaseId}`"
           >
-            <img :src="item.image" alt="" data-aos="zoom-in" />
+            <img
+              :src="post.node.featuredImage.node.sourceUrl"
+              alt="post.node.featuredImage.node.altText"
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            />
             <div class="d-flex flex-column justify-content-between">
               <div class="titleAndText">
-                <h3 class="title">{{ item.title }}</h3>
-                <p class="text">{{ item.text }}</p>
+                  <nuxt-link :to="`/blogs/${post.node.slug}`">
+                    <h3 class="title">{{ post.node.title }}</h3>
+                  </nuxt-link>
+                <p class="text" v-html="post.node.excerpt"></p>
               </div>
-              <div class="number mont">0{{ item.id }}.</div>
+              <div class="number mont">{{ post.node.databaseId }}</div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
       <Footer lang="fa" />
     </div>
     <MouseEffect />
   </div>
+  
 </template>
+
 
 <script>
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import ALL_POSTS_QUERY from '~/apollo/queries/3lastposts.gql'
+
+
 export default {
+  //dynamic
+/* apollo: {
+      posts: {
+        query: ALL_POSTS_QUERY,
+        prefetch: true,
+      },
+    }, 
+ */
+
+
+    
+ //2
+/*   async fetch() {
+    const response = await fetch('http://peyman.local/graphql', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        query: ALL_POSTS_QUERY.loc.source.body,
+      }),
+    });
+
+    const { data } = await response.json();
+
+    if (data.posts && data.posts.edges) {
+      this.posts = data.posts.edges;
+    } else {
+      this.posts = [];
+    }
+  }, */
+
+//3
+
+/*   apolloProvider: require('client').default,
+  async asyncData({ app }) {
+    const { data } = await app.apolloProvider.defaultClient.query({
+      query: ALL_POSTS_QUERY,
+    });
+
+    const posts = (data.posts && data.posts.edges) ? data.posts.edges : [];
+
+    return { posts };
+  }, */
+
+//4
+
+  async asyncData({ app }) {
+    const { data } = await app.apolloProvider.defaultClient.query({
+      query: ALL_POSTS_QUERY,
+    });
+
+    const posts = (data.posts && data.posts.edges) ? data.posts.edges : [];
+
+    return { posts };
+  },
+
+
+  //dynamic
   data() {
     return {
       language: "",
+      posts: [],
+
+/*       language: "",
+ */      
       unitItems: [
         {
           id: 1,
@@ -351,26 +428,7 @@ export default {
                 vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
         },
       ],
-      faNewsItems: [
-        {
-          id: 1,
-          image: "/images/homeNew1.jpg",
-          title: "لورم ایپسوم متن",
-          text: `لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است ...`,
-        },
-        {
-          id: 2,
-          image: "/images/homeNew2.jpg",
-          title: "لورم ایپسوم متن",
-          text: `لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است ...`,
-        },
-        {
-          id: 3,
-          image: "/images/homeNew3.jpg",
-          title: "لورم ایپسوم متن",
-          text: `لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است ...`,
-        },
-      ],
+    
       video: false,
     };
   },
@@ -379,8 +437,7 @@ export default {
     setTimeout(() => {
       this.unitAnimation();
       gsap.registerPlugin(ScrollTrigger);
-      let tl = gsap.timeline();
-      tl.to("#trigger", {
+      const tl = gsap.timeline({
         scrollTrigger: {
           trigger: ".animationImage",
           start: "50% center",
@@ -388,10 +445,21 @@ export default {
           scrub: true,
           // markers: true,
         },
-        scale: 3,
-        top: 50,
-        // transform: "translateY(650px)",
       });
+      tl.to(".animationImage", {
+        position: "fixed",
+        top: "0px",
+        duration: 0.1,
+      });
+      tl.to("#trigger", { scale: 3, top: 50, duration: 10 });
+      tl.to(".animationImage", { position: "fixed", duration: 10 });
+      tl.to(".animationImage", { position: "relative", duration: 0.05 });
+      tl.to(".video", { top: "750px", duration: 0.05 });
+      if (window.innerWidth > 750) {
+        tl.to(".news", { marginTop: "1000px", duration: 0.05 });
+      } else if (window.innerWidth < 750) {
+        tl.to(".news", { marginTop: "800px", duration: 0.05 });
+      }
     }, 10);
     window.addEventListener("scroll", () => {
       if (
@@ -405,26 +473,13 @@ export default {
       ) {
         this.video = false;
       }
-      var top = parseInt(
-        document.getElementById("trigger").style.top.split("px")[0]
-      );
-      if (top > 0 && top < 50) {
-        document.getElementsByClassName("animationImage")[0].style.position =
-          "fixed";
-        document.getElementsByClassName("animationImage")[0].style.top = "0px";
-        document.getElementsByClassName("news")[0].style.marginTop = "1600px";
-      } else if (top == 50 || top == 0) {
-        document.getElementsByClassName("animationImage")[0].style.position =
-          "relative";
-        document.getElementsByClassName("news")[0].style.marginTop = "900px";
-      }
     });
   },
 
   methods: {
     change() {
-      this.$store.commit("change");
-    },
+        this.$store.commit("change");
+      },
     unitAnimation() {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -460,10 +515,10 @@ export default {
     },
   },
   watch: {
-    "$store.state.lang"() {
-      this.language = this.$store.state.lang;
+      "$store.state.lang"() {
+        this.language = this.$store.state.lang;
+      },
     },
-  },
 };
 </script>
 

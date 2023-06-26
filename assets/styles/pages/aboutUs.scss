@@ -246,7 +246,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
-        line-height: 32px;
+        line-height: 30px;
 
         color: #dddddd;
       }
@@ -337,8 +337,7 @@
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
-        line-height: 32px;
-
+        line-height: 30px;
         color: #ffffff;
         margin-bottom: 47px;
       }
@@ -359,7 +358,6 @@
             font-weight: 300;
             font-size: 25px;
             line-height: 30px;
-
             color: #ffffff;
             margin-bottom: 15px;
             max-width: 320px;
@@ -368,8 +366,7 @@
             font-style: normal;
             font-weight: 500;
             font-size: 16px;
-            line-height: 24px;
-
+            line-height: 30px;
             color: #ffffff;
           }
         }
@@ -402,7 +399,7 @@
       p {
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
+        font-size: 16px;
         color: #ffffff;
         margin-top: 60px;
         margin-bottom: 94px;
@@ -614,16 +611,15 @@
   .aboutUs {
     .enAboutUs {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 200px;
-
         .title {
           h2 {
             font-size: 20px;
             margin-bottom: 20px;
           }
           h1 {
-            font-size: 40px;
+            font-size: 20px;
             margin-bottom: 50px;
           }
         }
@@ -632,26 +628,30 @@
             font-size: 20px;
           }
           p {
-            font-size: 12px;
+            font-size: 14px;
+            line-height: 20px;
           }
         }
       }
       .capabilities,
       .activities,
       .visions {
-        padding: 0px 20px;
+        padding: 0px 50px;
         margin-bottom: 200px;
         h2 {
-          font-size: 40px !important;
+          font-size: 20px !important;
         }
         span,
         p {
-          font-size: 12px !important;
+          font-size: 10px !important;
+          line-height: 20px !important;
         }
       }
       .visions {
         .items {
           .item {
+            margin: 50px 0px;
+            padding-left: 20px;
             img {
               height: 70px;
             }
@@ -665,7 +665,7 @@
     }
     .faAboutUs {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 200px;
         .title {
           h2 {
@@ -673,7 +673,7 @@
             margin-bottom: 20px;
           }
           h1 {
-            font-size: 40px;
+            font-size: 20px;
             margin-bottom: 50px;
           }
         }
@@ -682,32 +682,52 @@
             font-size: 20px;
           }
           p {
-            font-size: 12px;
+            font-size: 14px;
+            line-height: 20px;
           }
         }
       }
       .capabilities,
       .activities,
       .visions {
-        padding: 0px 20px;
+        padding: 0px 50px;
         margin-bottom: 200px;
         h2 {
-          font-size: 40px !important;
+          font-size: 20px !important;
         }
         span,
         p {
-          font-size: 12px !important;
+          font-size: 10px !important;
+          line-height: 20px;
         }
       }
       .visions {
+        .visionHeader {
+          h4 {
+            font-size: 20px;
+            .blueLine {
+              width: 50px;
+              height: 5px;
+            }
+          }
+        }
         .items {
+          margin-bottom: 50px;
           .item {
+            padding-right: 20px;
+            margin-bottom: 50px;
+            margin-top: 0px;
             img {
               height: 70px;
             }
             h3 {
               font-size: 20px;
+              line-height: 35px;
               min-width: 100%;
+            }
+            p {
+              font-size: 14px;
+              line-height: 20px;
             }
           }
         }
@@ -716,14 +736,19 @@
         margin-bottom: 100px;
         h2,
         h3 {
-          font-size: 40px;
+          font-size: 20px;
+          .blueLine {
+            width: 50px;
+            height: 5px;
+          }
         }
         p {
-          font-size: 12px;
+          font-size: 14px;
+          line-height: 20px;
         }
         .padd,
         .images {
-          padding: 0px 20px;
+          padding: 0px 50px;
         }
         .splide {
           padding: 0px 60px;

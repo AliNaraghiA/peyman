@@ -1,0 +1,19 @@
+query last3posts {
+  posts(first: 3, where: { orderby: { field: DATE, order: DESC } }) {
+    edges {
+      node {
+        id
+        title
+        slug
+        date
+        excerpt
+        featuredImage{
+          node{
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}

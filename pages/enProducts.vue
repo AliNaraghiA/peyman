@@ -114,7 +114,7 @@ export default {
       var dur = 0.5,
         next = 20,
         dur = 14,
-        tt = 3000;
+        tt = 4000;
       var action = gsap
         .timeline({
           defaults: {

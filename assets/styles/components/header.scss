@@ -79,7 +79,7 @@
       display: none;
     }
     a {
-      margin-left: 50px;
+      margin-left: 55px;
       color: white;
       font-size: 15px;
       font-weight: 600;
@@ -90,15 +90,14 @@
       }
     }
     .productsLinks {
-      min-width: 150px;
-      max-width: 150px;
+      min-width: 140px;
+      max-width: 140px;
       height: 29px;
       display: flex;
       flex-direction: column;
       overflow: hidden;
       transition: all 0.5s;
-      padding: 0px 10px 10px 10px;
-      margin-left: 10px;
+      padding: 0px 5px 5px 5px;
       &:hover {
         background-color: rgba(0, 0, 0, 0.5);
         height: 220px;
@@ -115,6 +114,9 @@
     }
     .lastHeadDiv {
       height: fit-content;
+      a {
+        margin-left: 0px;
+      }
       .bagIcon {
         width: 24px;
         height: 24px;
@@ -326,6 +328,9 @@
     }
     .faHeader {
       padding: 50px 100px;
+      a {
+        margin-left: 0px;
+      }
       .links {
         display: none !important;
       }
@@ -380,6 +385,9 @@
           .searchIcon {
             margin: 0px;
           }
+          a {
+            margin-left: 0px;
+          }
         }
         .arrow {
           transition: all 1s;
@@ -411,6 +419,9 @@
           background-color: #003f6e;
           padding: 10px;
           border-radius: 25px;
+          a {
+            margin: 0px;
+          }
         }
         .arrow {
           transition: all 1s;

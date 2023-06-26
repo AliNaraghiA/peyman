@@ -40,6 +40,7 @@ export default {
     // https://go.nuxtjs.dev/typescript
     "@nuxt/typescript-build",
     "nuxt-gsap-module",
+    "@nuxtjs/apollo",
   ],
 
   gsap: {},
@@ -48,12 +49,27 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/bootstrap
     "bootstrap-vue/nuxt",
+    "@nuxtjs/axios",
   ],
 
+/*   axios: {
+    baseURL: 'http://peyman.local/wp-json/', // Replace with your WordPress site URL
+  }, */
+
+  apollo: {
+    clientConfigs: {
+      default: {
+        httpEndpoint: 'https://backend.ravakdemo.ir/graphql',
+      },
+    },
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend(config) {
       config.resolve.alias["node-fetch-native"] = require.resolve("node-fetch");
     },
   },
+
+
+
 };

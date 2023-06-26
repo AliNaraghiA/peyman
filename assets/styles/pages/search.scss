@@ -1,0 +1,124 @@
+.search {
+  background: #0c0f1c;
+  overflow-x: hidden;
+  .faSearch {
+    * {
+      z-index: 8;
+      position: relative;
+      direction: rtl;
+      text-align: right;
+    }
+    .searchDiv {
+      padding: 260px;
+      padding-bottom: 0px;
+      min-height: 100vh;
+
+      .inputDiv {
+        width: 100%;
+        position: relative;
+        input {
+          width: 100%;
+          background-color: inherit;
+          border: none;
+          border-bottom: 1px solid white;
+          font-size: 18px;
+          padding: 10px 50px;
+          padding-left: 0px;
+          color: white;
+          &:focus {
+            outline: none;
+          }
+        }
+        img {
+          position: absolute;
+          right: 0;
+          top: 10px;
+        }
+      }
+    }
+  }
+  .enSearch {
+    * {
+      z-index: 8;
+      position: relative;
+    }
+    .searchDiv {
+      padding: 260px;
+      padding-bottom: 0px;
+      min-height: 100vh;
+
+      .inputDiv {
+        width: 100%;
+        position: relative;
+        input {
+          width: 100%;
+          background-color: inherit;
+          border: none;
+          border-bottom: 1px solid white;
+          font-size: 18px;
+          padding: 10px 50px;
+          padding-right: 0px;
+          color: white;
+          &:focus {
+            outline: none;
+          }
+        }
+        img {
+          position: absolute;
+          left: 0;
+          top: 10px;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1679px) {
+  .search {
+    .faSearch {
+      .searchDiv {
+        padding: 250px 100px 0px 100px;
+      }
+    }
+    .enSearch {
+      .searchDiv {
+        padding: 250px 100px 0px 100px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 750px) {
+  .search {
+    .faSearch {
+      .searchDiv {
+        padding: 170px 50px 0px 50px;
+        .inputDiv {
+          img {
+            width: 20px;
+            top: 8px;
+          }
+          input {
+            padding: 10px 30px;
+            padding-left: 0px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    .enSearch {
+      .searchDiv {
+        padding: 170px 50px 0px 50px;
+        .inputDiv {
+          img {
+            width: 20px;
+            top: 8px;
+          }
+          input {
+            padding: 10px 30px;
+            padding-right: 0px;
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}

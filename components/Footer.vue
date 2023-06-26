@@ -84,7 +84,10 @@
         </div>
       </div>
       <div class="botFooter mont">
-        <div>. 2022 All Rights Reserved | Powered by Dayan Agency Co ©</div>
+        <div>
+          . 2022 All Rights Reserved | Powered by
+          <a href="https://www.ravakagancy.com">Ravak Agency</a> Co ©
+        </div>
       </div>
     </div>
   </div>

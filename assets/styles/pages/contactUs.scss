@@ -242,9 +242,8 @@
           margin-right: 115px;
           font-style: normal;
           font-weight: 500;
-          font-size: 18px;
-          line-height: 32px;
-
+          font-size: 16px;
+          line-height: 30px;
           color: #dddddd;
           max-width: 409px;
           span {
@@ -288,9 +287,8 @@
         p {
           font-style: normal;
           font-weight: 300;
-          font-size: 20px;
-          line-height: 24px;
-
+          font-size: 16px;
+          line-height: 30px;
           color: #ffffff;
           max-width: 621px;
           margin-bottom: 100px;
@@ -440,45 +438,55 @@
   .contactUs {
     .enContactUs {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 100px;
         h3 {
           font-size: 20px;
           margin-bottom: 20px;
         }
         h1 {
-          font-size: 40px;
+          font-size: 20px;
           margin-bottom: 40px;
+        }
+        .animation {
+          height: 300px;
         }
         .informations {
           .bordered {
+            padding-left: 20px;
             img {
-              width: 40px;
+              width: 30px;
             }
             h2 {
               font-size: 20px;
             }
           }
           p {
-            font-size: 12px;
-            margin-left: 50px;
+            font-size: 14px;
+            line-height: 20px;
+            margin-left: 35px;
           }
           .socials {
-            margin-left: 50px;
+            margin-left: 35px;
+            .whiteCircle {
+              width: 35px;
+              height: 35px;
+            }
           }
         }
       }
       .conversation {
-        padding: 0px 20px;
+        padding: 0px 50px;
         margin-bottom: 100px;
         form {
           margin-right: 0px;
           h2 {
-            font-size: 40px;
+            font-size: 20px;
             margin-bottom: 0px;
           }
           p {
-            font-size: 12px;
+            font-size: 14px;
+            line-height: 20px;
             margin-bottom: 50px;
           }
           input,
@@ -491,50 +499,65 @@
           .size {
             font-size: 12px;
           }
+        }
+        .animation {
+          height: 300px;
         }
       }
     }
     .faContactUs {
       .topDiv {
-        padding: 170px 20px 0px 20px;
-        margin-bottom: 100px;
+        padding: 170px 50px 0px 50px;
+        margin-bottom: 200px;
         h3 {
           font-size: 20px;
           margin-bottom: 20px;
         }
         h1 {
-          font-size: 40px;
+          font-size: 20px;
           margin-bottom: 40px;
+        }
+        .animation {
+          height: 300px;
         }
         .informations {
           .bordered {
+            padding-right: 20px;
             img {
-              width: 40px;
+              width: 20px;
             }
             h2 {
               font-size: 20px;
             }
           }
           p {
-            font-size: 12px;
-            margin-left: 50px;
+            font-size: 14px;
+            line-height: 20px;
+            margin-left: 0px;
+            margin-right: 60px;
           }
           .socials {
-            margin-left: 50px;
+            margin-left: 0px;
+            margin-right: 50px;
+            .whiteCircle {
+              width: 35px;
+              height: 35px;
+            }
           }
         }
       }
       .conversation {
-        padding: 0px 20px;
+        padding: 0px 50px;
         margin-bottom: 100px;
         form {
           margin-right: 0px;
           h2 {
-            font-size: 40px;
+            font-size: 20px;
             margin-bottom: 0px;
           }
           p {
-            font-size: 12px;
+            font-size: 14px;
+            line-height: 20px;
             margin-bottom: 50px;
           }
           input,
@@ -547,6 +570,9 @@
           .size {
             font-size: 12px;
           }
+        }
+        .animation {
+          height: 300px;
         }
       }
     }

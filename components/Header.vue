@@ -39,7 +39,9 @@
               {{ language.toUpperCase() }}
             </div>
           </div>
-          <img src="/icons/search.svg" class="searchIcon" />
+          <router-link to="/search">
+            <img src="/icons/search.svg" class="searchIcon" />
+          </router-link>
         </div>
         <div class="lastHeadResponse">
           <img
@@ -50,7 +52,9 @@
           />
           <div class="effect d-flex flex-column align-items-center">
             <img src="/icons/global.svg" class="globalIcon" @click="change" />
-            <img src="/icons/search.svg" class="searchIcon" />
+            <router-link to="/search">
+              <img src="/icons/search.svg" class="searchIcon" />
+            </router-link>
           </div>
         </div>
       </div>
@@ -110,7 +114,9 @@
           </div>
         </div>
         <div class="blueLine"></div>
-        <img src="/icons/search.svg" class="searchIcon" />
+        <router-link to="/search">
+          <img src="/icons/search.svg" class="searchIcon" />
+        </router-link>
       </div>
       <div class="lastHeadResponse">
         <img
@@ -122,7 +128,9 @@
         <div class="effect d-flex flex-column">
           <img src="/icons/bag.svg" class="bagIcon" />
           <img src="/icons/global.svg" class="globalIcon" @click="change" />
-          <img src="/icons/search.svg" class="searchIcon" />
+          <router-link to="/search">
+            <img src="/icons/search.svg" class="searchIcon" />
+          </router-link>
         </div>
       </div>
     </div>

@@ -69,10 +69,20 @@
             </li>
           </ul>
         </div>
-        <img src="/images/capabilities.jpg" alt="" />
+        <img
+          src="/images/capabilities.jpg"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          alt=""
+        />
       </div>
       <div class="activities d-flex justify-content-between align-items-center">
-        <img src="/images/activities.jpg" alt="" />
+        <img
+          src="/images/activities.jpg"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          alt=""
+        />
         <div>
           <h2>Our Activities</h2>
           <ul>
@@ -231,10 +241,20 @@
             </li>
           </ul>
         </div>
-        <img src="/images/capabilities.jpg" alt="" />
+        <img
+          src="/images/capabilities.jpg"
+          data-aos="fade-right"
+          data-aos-duration="1000"
+          alt=""
+        />
       </div>
       <div class="activities d-flex align-items-start">
-        <img src="/images/activities.jpg" alt="" />
+        <img
+          src="/images/activities.jpg"
+          data-aos="fade-left"
+          data-aos-duration="1000"
+          alt=""
+        />
         <div>
           <h2>توانمندی های ما</h2>
           <ul>

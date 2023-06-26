@@ -1,0 +1,19 @@
+query ALL_POSTS_QUERY {
+  posts(first: 3, where: { orderby: { field: DATE, order: DESC } }) {
+    edges {
+      node {
+        databaseId
+        title
+        slug
+        date
+        excerpt
+        featuredImage{
+          node{
+            altText
+            sourceUrl
+          }
+        }
+      }
+      }
+    }
+  }

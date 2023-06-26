@@ -255,34 +255,66 @@
   .footer {
     .enFooter {
       h2 {
-        font-size: 40px !important;
+        font-size: 20px !important;
       }
       a,
       p,
       div {
-        font-size: 12px !important;
+        font-size: 10px !important;
       }
       .topFooter {
-        padding: 0px 20px;
+        padding: 0px 50px;
+        .email {
+          align-items: center;
+          padding: 15px;
+          img {
+            width: 20px;
+          }
+        }
+        .logo {
+          width: 70px;
+        }
+        .whiteCircle {
+          width: 35px;
+          height: 35px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
       }
       .botFooter {
-        padding: 20px;
+        padding: 50px;
       }
     }
     .faFooter {
       h2 {
-        font-size: 40px !important;
+        font-size: 20px !important;
       }
       a,
       p,
       div {
-        font-size: 12px !important;
+        font-size: 10px !important;
       }
       .topFooter {
-        padding: 0px 20px;
+        padding: 0px 50px;
+        .email {
+          align-items: center;
+          padding: 15px;
+          img {
+            width: 20px;
+          }
+        }
+        .logo {
+          width: 70px;
+        }
+        .whiteCircle {
+          width: 35px;
+          height: 35px;
+          margin-top: 30px;
+          margin-bottom: 30px;
+        }
       }
       .botFooter {
-        padding: 20px;
+        padding: 50px;
       }
     }
   }

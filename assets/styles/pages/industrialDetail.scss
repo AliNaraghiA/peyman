@@ -36,20 +36,11 @@
         max-width: 750px;
         font-style: normal;
         font-weight: 300;
-        font-size: 50px;
+        font-size: 38px;
         line-height: 98px;
         color: #ffffff;
         margin-top: 37px;
         margin-bottom: 10px;
-      }
-      p {
-        max-width: 664px;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 25px;
-        line-height: 45px;
-
-        color: #ffffff;
       }
     }
     .lineDiv {
@@ -75,9 +66,8 @@
         max-width: 725px;
         font-style: normal;
         font-weight: 400;
-        font-size: 25px;
-        line-height: 45px;
-
+        font-size: 16px;
+        line-height: 30px;
         color: #ffffff;
       }
       img {
@@ -207,31 +197,32 @@
   .industrialDetail {
     .faIndustrialDetail {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 100px;
         h3 {
           font-size: 20px;
         }
         h1 {
-          font-size: 25px;
-          line-height: 50px;
+          font-size: 20px;
+          line-height: 35px;
         }
         p {
           font-size: 14px;
+          line-height: 20px;
         }
       }
       .imgAndText,
       .diameter,
       .images {
-        padding: 0px 20px;
+        padding: 0px 50px;
       }
       .imgAndText {
         img {
           width: 100%;
         }
         .text {
-          font-size: 12px;
-          line-height: 30px;
+          font-size: 14px;
+          line-height: 20px;
         }
       }
       .diameter {

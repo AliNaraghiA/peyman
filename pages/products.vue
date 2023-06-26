@@ -82,20 +82,19 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 export default {
   data() {
-    return {
-      language: "",
-    };
-  },
+      return {
+        language: "",
+      };
+    },
   mounted() {
     this.language = this.$store.state.lang;
+
     setTimeout(() => {
       this.unitAnimation();
     }, 10);
   },
   methods: {
-    change() {
-      this.$store.commit("change");
-    },
+
     unitAnimation() {
       gsap.registerPlugin(ScrollTrigger);
 
@@ -129,12 +128,16 @@ export default {
         scrub: 0.3,
       });
     },
+    change() {
+        this.$store.commit("change");
+      },
   },
-  watch: {
-    "$store.state.lang"() {
-      this.language = this.$store.state.lang;
+
+    watch: {
+      "$store.state.lang"() {
+        this.language = this.$store.state.lang;
+      },
     },
-  },
 };
 </script>
     

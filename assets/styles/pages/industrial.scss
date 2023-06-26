@@ -45,8 +45,8 @@
         max-width: 664px;
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 32px;
+        font-size: 16px;
+        line-height: 30px;
 
         color: #ffffff;
       }
@@ -116,9 +116,8 @@
           max-width: 725px;
           font-style: normal;
           font-weight: 400;
-          font-size: 18px;
-          line-height: 32px;
-
+          font-size: 16px;
+          line-height: 30px;
           color: #ffffff;
         }
       }
@@ -172,6 +171,7 @@
       }
       .item1 {
         flex-direction: column;
+        justify-content: center !important;
         & > div {
           width: 100%;
           .titleAndText {
@@ -179,14 +179,14 @@
               max-width: 100%;
             }
           }
-          img {
-            position: relative;
-            bottom: 100px;
-          }
+        }
+        img {
+          width: 300px;
         }
       }
       .item2 {
         flex-direction: column-reverse;
+        justify-content: center !important;
         & > div {
           width: 100%;
           .titleAndText {
@@ -194,10 +194,9 @@
               max-width: 100%;
             }
           }
-          img {
-            position: relative;
-            bottom: 100px;
-          }
+        }
+        img {
+          width: 300px;
         }
       }
     }
@@ -207,35 +206,43 @@
   .industrial {
     .faIndustrial {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 100px;
         h3 {
           font-size: 20px;
         }
         h1 {
-          font-size: 25px;
-          line-height: 50px;
+          font-size: 20px;
+          line-height: 35px;
         }
         p {
           font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .scroll {
+        .scrollIcon {
+          height: 40px;
+          width: 20px;
+          padding: 0px 6px;
+        }
+        .scrollTitle {
+          font-size: 12px;
         }
       }
       .scroll,
       .item1,
       .item2 {
-        padding: 0px 20px;
+        padding: 0px 50px;
         .titleAndText {
           .title {
             font-size: 20px;
             margin-bottom: 20px;
           }
           .text {
-            font-size: 13px;
+            font-size: 14px;
+            line-height: 20px;
           }
-        }
-        img {
-          width: 100%;
-          height: auto;
         }
       }
       .footer {

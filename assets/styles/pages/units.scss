@@ -164,9 +164,8 @@
         max-width: 664px;
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 32px;
-
+        font-size: 16px;
+        line-height: 30px;
         color: #ffffff;
       }
     }
@@ -233,8 +232,8 @@
           max-width: 653px;
           font-style: normal;
           font-weight: 400;
-          font-size: 18px;
-          line-height: 32px;
+          font-size: 16px;
+          line-height: 30px;
 
           color: #ffffff;
           margin-left: 20px;
@@ -352,22 +351,32 @@
   .units {
     .faUnits {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 100px;
         h3 {
           font-size: 20px;
         }
         h1 {
-          font-size: 30px;
+          font-size: 20px;
+          line-height: 35px;
           margin: 0px;
         }
         p {
           max-width: 100%;
-          font-size: 12px;
+          font-size: 14px;
+          line-height: 20px;
         }
       }
       .scroll {
-        padding: 0px 20px;
+        padding: 0px 50px;
+        .scrollIcon {
+          height: 40px;
+          width: 20px;
+          padding: 0px 6px;
+        }
+        .scrollTitle {
+          font-size: 12px;
+        }
       }
       .lineDiv {
         margin-bottom: 100px;
@@ -377,14 +386,19 @@
       }
       .myUnits {
         .unit {
-          padding: 20px;
-          justify-content: start !important;
+          padding: 50px;
+          justify-content: center !important;
           h2 {
-            font-size: 25px;
+            font-size: 20px;
+            line-height: 35px;
             margin-bottom: 0px;
+            div {
+              margin-left: 0px;
+            }
           }
           p {
-            font-size: 12px;
+            font-size: 14px;
+            line-height: 20px;
           }
           a {
             font-size: 12px;
@@ -397,39 +411,46 @@
     }
     .enUnits {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 100px;
         h3 {
           font-size: 20px;
+          line-height: 35px;
         }
         h1 {
-          font-size: 30px;
+          font-size: 20px;
+          line-height: 35px;
           margin: 0px;
         }
         p {
           max-width: 100%;
-          font-size: 12px;
+          line-height: 20px;
+          font-size: 14px;
         }
       }
       .scroll {
-        padding: 0px 20px;
+        padding: 0px 50px;
       }
       .lineDiv {
-        margin-bottom: 100px;
+        margin-bottom: 200px;
+        height: 300px;
+        overflow: hidden;
         &::before {
           display: none;
         }
       }
       .myUnits {
         .unit {
-          padding: 20px;
-          justify-content: start !important;
+          padding: 50px;
+          justify-content: center !important;
           h2 {
-            font-size: 25px;
+            font-size: 20px;
+            line-height: 35px;
             margin-bottom: 0px;
           }
           p {
-            font-size: 12px;
+            font-size: 14px;
+            line-height: 20px;
           }
           a {
             font-size: 12px;

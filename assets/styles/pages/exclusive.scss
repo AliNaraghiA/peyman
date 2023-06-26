@@ -13,7 +13,6 @@
       margin-bottom: 180px;
       position: relative;
       padding-top: 250px;
-
       &::before {
         content: "";
         width: 864px;
@@ -46,9 +45,8 @@
         max-width: 664px;
         font-style: normal;
         font-weight: 400;
-        font-size: 18px;
-        line-height: 32px;
-
+        font-size: 16px;
+        line-height: 30px;
         color: #ffffff;
       }
     }
@@ -95,8 +93,8 @@
       padding: 0px 260px;
       font-style: normal;
       font-weight: 300;
-      font-size: 18px;
-      line-height: 32px;
+      font-size: 16px;
+      line-height: 30px;
       color: #ffffff;
       margin-top: 200px;
       margin-bottom: 100px;
@@ -220,25 +218,36 @@
   .exclusive {
     .faExclusive {
       .topDiv {
-        padding: 170px 20px 0px 20px;
+        padding: 170px 50px 0px 50px;
         margin-bottom: 100px;
         h3 {
           font-size: 20px;
         }
         h1 {
-          font-size: 25px;
-          line-height: 50px;
+          font-size: 20px;
+          line-height: 35px;
         }
         p {
           font-size: 14px;
+          line-height: 20px;
+        }
+      }
+      .scroll {
+        .scrollIcon {
+          height: 40px;
+          width: 20px;
+          padding: 0px 6px;
+        }
+        .scrollTitle {
+          font-size: 12px;
         }
       }
       .scroll,
       .formText {
-        padding: 0px 20px;
+        padding: 0px 50px;
       }
       form {
-        margin: 0px 20px;
+        margin: 0px 50px;
         padding: 20px;
         input {
           width: 100%;
@@ -252,20 +261,20 @@
         .el-upload {
           .el-upload-dragger {
             .el-upload__text {
-              font-size: 12px;
+              font-size: 14px;
               img {
-                width: 20px;
+                width: 15px;
               }
             }
           }
         }
         .size {
-          font-size: 12px;
+          font-size: 14px;
         }
       }
       .formText {
         font-size: 14px;
-        line-height: 40px;
+        line-height: 20px;
       }
     }
   }
