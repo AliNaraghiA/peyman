@@ -1,0 +1,22 @@
+query last3postsEn {
+  posts(
+    first: 3
+    where: {orderby: {field: DATE, order: DESC}, categoryNotIn: [6], categoryIn: [5]}
+  ) {
+    edges {
+      node {
+        id
+        title
+        slug
+        date
+        excerpt
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}

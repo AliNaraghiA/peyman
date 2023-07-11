@@ -1,0 +1,30 @@
+query PostsFa($first: Int, $after: String) {
+  posts(first: $first, after: $after ,where:{categoryNotIn:[5]  categoryIn:[6]} ){
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      endCursor
+      startCursor
+      offsetPagination {
+        hasMore
+        hasPrevious
+        total
+      }
+    }
+    edges {
+      cursor
+      node {
+        databaseId
+        title
+        slug
+        excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}

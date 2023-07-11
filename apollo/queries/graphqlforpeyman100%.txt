@@ -1,0 +1,261 @@
+query Galleries {
+  galleries {
+    edges {
+      node {
+        title
+        id
+        slug
+        acfgallery {
+          title
+          englishtitle
+          image {
+            sourceUrl
+            altText
+          }
+        }
+      }
+    }
+  }
+}
+
+query PostsFa($first: Int, $after: String) {
+  posts(
+    first: $first
+    after: $after
+    where: {categoryNotIn: [5], categoryIn: [6]}
+  ) {
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      endCursor
+      startCursor
+      offsetPagination {
+        hasMore
+        hasPrevious
+        total
+      }
+    }
+    edges {
+      cursor
+      node {
+        databaseId
+        title
+        slug
+        excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query PostsEn($first: Int, $after: String) {
+  posts(
+    first: $first
+    after: $after
+    where: {categoryNotIn: [6], categoryIn: [5]}
+  ) {
+    pageInfo {
+      endCursor
+      hasNextPage
+      hasPreviousPage
+      endCursor
+      startCursor
+      offsetPagination {
+        hasMore
+        hasPrevious
+        total
+      }
+    }
+    edges {
+      cursor
+      node {
+        databaseId
+        title
+        slug
+        excerpt
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query PostBySlugEn($slug: ID!) {
+  post(id: $slug, idType: SLUG) {
+    title
+    content
+    postId
+    featuredImage {
+      node {
+        sourceUrl
+        altText
+      }
+    }
+  }
+}
+
+query PostBySlugFa($id: ID!) {
+  post(id: $id, idType: ID) {
+    title
+    content
+    postId
+    featuredImage {
+      node {
+        sourceUrl
+        altText
+      }
+    }
+  }
+}
+
+query last3postsFa {
+  posts(
+    first: 3
+    where: {orderby: {field: DATE, order: DESC}, categoryNotIn: [5], categoryIn: [6]}
+  ) {
+    edges {
+      node {
+        id
+        title
+        slug
+        date
+        excerpt
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query last3postsEn {
+  posts(
+    first: 3
+    where: {orderby: {field: DATE, order: DESC}, categoryNotIn: [6], categoryIn: [5]}
+  ) {
+    edges {
+      node {
+        id
+        title
+        slug
+        date
+        excerpt
+        featuredImage {
+          node {
+            altText
+            sourceUrl
+          }
+        }
+      }
+    }
+  }
+}
+
+query Constructions {
+  constructions {
+    nodes {
+      desiredSlug
+      databaseId
+      slug
+      acfconstructions {
+        category
+        repeater {
+          image {
+            altText
+            sourceUrl
+          }
+          name
+          weight
+          title
+        }
+      }
+    }
+  }
+}
+
+query englishConstructions {
+  englishconstructions {
+    nodes {
+      desiredSlug
+      databaseId
+      slug
+      acfconstructions {
+        category
+        repeater {
+          image {
+            altText
+            sourceUrl
+          }
+          name
+          weight
+          title
+        }
+      }
+    }
+  }
+}
+
+query indust1($slug: ID!) {
+  industrial(id: $slug, idType: SLUG) {
+    databaseId
+    title
+    slug
+    acfindustrial {
+      description
+      title
+      sizetitle
+      mainimage {
+        altText
+        sourceUrl
+      }
+      repeater {
+        one
+        two
+        three
+        four
+      }
+      gallery {
+        altText
+        sourceUrl
+      }
+    }
+  }
+}
+
+query indust2($slug: ID!) {
+  englishindustrial(id: $slug, idType: SLUG) {
+    databaseId
+    title
+    slug
+    acfindustrial {
+      description
+      title
+      sizetitle
+      mainimage {
+        altText
+        sourceUrl
+      }
+      repeater {
+        one
+        two
+        three
+        four
+      }
+      gallery {
+        altText
+        sourceUrl
+      }
+    }
+  }
+}

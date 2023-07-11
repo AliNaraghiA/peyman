@@ -1,0 +1,13 @@
+query PostBySlugFa($id: ID!) {
+  post(id: $id, idType: ID) {
+    title
+    content
+    postId
+    featuredImage {
+      node {
+        sourceUrl
+        altText
+      }
+    }
+  }
+}
