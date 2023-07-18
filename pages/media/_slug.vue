@@ -5,9 +5,7 @@
       <div class="topDiv">
         <h3>Gallery</h3>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas
-          purus viverra accumsan in nisl nisi Arcu cursus.
+Industrial aluminum profiles are versatile and widely used in various industries due to their lightweight, high strength, and corrosion resistance. They can be extruded either hot or cold, and come in a wide range of sizes and lengths. Standard profiles are commonly available and widely used in various applications, while custom profiles are specifically tailored to meet unique design requirements. The benefits of aluminum extrusions include low weight and high strength, corrosion resistance, the ability to create complex shapes, and the ability to design custom profiles that meet various aesthetic, functional, and manufacturability requirements. Industrial aluminum profiles are commonly used in the construction, automotive, aerospace, and engineering industries to produce machine bases, building framing, cryogenic vessels, piping, bridges, and industrial machinery.
         </p>
       </div>
       <div class="galleryList">
@@ -22,10 +20,7 @@
       <div class="topDiv">
         <h3 class="mont">Gallery</h3>
         <p>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.
-        </p>
+پروفیل آلومینیومی صنعتی به دلیل ویژگی‌های منحصر به فردی که شامل سبک وزن بودن، انعطاف پذیری بالا، مقاومت در برابر خوردگی، دارا بودن خاصیت تبادل دمایی و ... می‌باشد، در صنایع مختلفی مانند ساختمان سازی، خودروسازی، هوافضا و مهندسی برای تولید پایه‌های ماشین، قاب ساختمان، وسایل حمل و نقل، لوله‌ها، پل‌ها و ماشین‌آلات صنعتی به کار می‌رود. پروفیل‌های آلومینیومی معمولاً به دو صورت گرم و سرد اکستروژن می‌شوند و در اندازه‌ها و طول‌های مختلفی در دسترس هستند. پروفیل‌های استاندارد به طور عمومی در دسترس هستند و در برخی موارد پروفیل‌های سفارشی برای برآورده کردن نیازهای طراحی منحصر به فرد ساخته می‌شوند.        </p>
       </div>
       <div class="galleryList">
         <div class="imageDiv" v-for="(image, index) in gallery?.gallery" :key="index" >
