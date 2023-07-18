@@ -190,7 +190,7 @@
        this.attachment = event.target.files[0]
      },
      async submitForm() {
-       const apiUrl = 'https://backend.ravakdemo.ir/wp-json/contact-form-7/v1/contact-forms/387/feedback'
+       const apiUrl = 'https://backend.ppa-co.ir/wp-json/contact-form-7/v1/contact-forms/387/feedback'
  
        const formData = new FormData()
        formData.append('your-name', this.name)
