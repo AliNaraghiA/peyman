@@ -70,9 +70,8 @@
           <div class="texts">
             <h2>Exclusive products<span>.</span></h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna
-            </p>
+              Exclusive Products is a one-stop solution provider for all your aluminum product needs. They offer a wide range of exclusive products that are manufactured with the highest quality materials and can be customized to meet your specific requirements. With their expertise in product design, mold-making, casting, and production, they provide comprehensive solutions for every stage of your project. They also provide consultation services to help you make informed decisions about casting and manufacturing processes.
+           </p>
             <button class="effectBtn">
               <span> More Info </span>
             </button>
@@ -85,9 +84,7 @@
           <div class="texts">
             <h2>General products<span>.</span></h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna
-            </p>
+              General Products is a reliable and diverse collection of items that cater to a wide range of needs. From household essentials to electronics, clothing to accessories, General Products offers a comprehensive selection of high-quality products at competitive prices. Whether you're looking for everyday items or special occasion gifts, their extensive inventory ensures that you can find everything under one roof. With a commitment to customer satisfaction, General Products strives to provide convenience, affordability, and quality across their vast product range.            </p>
             <button class="effectBtn">
               <span> More Info </span>
             </button>
@@ -100,9 +97,7 @@
           <div class="texts">
             <h2>Industrial products<span>.</span></h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna
-            </p>
+              Aluminum with its silvery color and low specific weight has a very high application in industries. Based on the different properties of products and their uses, aluminum profiles can be produced in various dimensions and shapes. Aluminum profile is one of the industrial products that due to its properties such as lightness, strength, corrosion and heat resistance, flexibility and ease of processing, is used in many industries. These profiles can be used for making various industrial parts, interior of buildings, doors, windows, and even inside vehicles among other applications.            </p>
             <button class="effectBtn">
               <span> More Info </span>
             </button>
@@ -115,9 +110,7 @@
           <div class="texts">
             <h2>Ingots & billets<span>.</span></h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna
-            </p>
+              Today, one of the most diverse and commonly used aluminum parts in the construction industry is ingots and billets. Due to its resistance to corrosion and oxidation, aluminum is widely used for producing ingots and billets. These raw materials are used in various industrial applications with a primary focus on the manufacturing of aluminum profiles. Ingots and billets are produced through a process of melting and casting, which results in a high-quality metal with excellent properties such as high strength, durability, and malleability.            </p>
             <button class="effectBtn">
               <span> More Info </span>
             </button>
@@ -166,22 +159,25 @@
         <div class="newsList">
           <div
             class="d-flex justify-content-between new"
-            v-for="item in newsItems"
-            :key="item.id"
-            :id="`new${item.id}`"
+            v-if="posts && posts"
+            v-for="post in posts"
+            :key="post.id"
+            :id="`new${post.node.databaseId}`"
           >
             <img
-              :src="item.image"
-              alt=""
+              :src="post.node.featuredImage.node.sourceUrl"
+              alt="post.node.featuredImage.node.altText"
               data-aos="zoom-in"
               data-aos-duration="1000"
             />
             <div class="d-flex flex-column justify-content-between">
               <div class="titleAndText">
-                <h3 class="title">{{ item.title }}</h3>
-                <p class="text">{{ item.text }}</p>
+                  <nuxt-link :to="`/blogs/${post.node.slug}`">
+                    <h3 class="title">{{ post.node.title }}</h3>
+                  </nuxt-link>
+                <p class="text" v-html="post.node.excerpt"></p>
               </div>
-              <div class="number">0{{ item.id }}.</div>
+              <div class="number mont">{{ post.node.databaseId }}</div>
             </div>
           </div>
         </div>
@@ -195,9 +191,24 @@
 <script>
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import last3postsEn from '~/apollo/queries/last3postsEn.gql'
+
 export default {
+  async asyncData({ app }) {
+    const { data } = await app.apolloProvider.defaultClient.query({
+      query: last3postsEn,
+    });
+
+    const posts = (data.posts && data.posts.edges) ? data.posts.edges : [];
+
+    return { posts };
+  },
+
+
+  //dynamic
   data() {
     return {
+      posts: [],
       language: "",
       unitItems: [
         {
@@ -318,52 +329,7 @@ export default {
           text: "محصولات تولید شده پس از مراحل بسته بندی و لیبل گذاری مطابق یک سیستم منظم و طبقه بندی شده و تا زمان ارسال و تحویل به مشتری در انبار نگهداری می گردند...",
         },
       ],
-      newsItems: [
-        {
-          id: 1,
-          image: "/images/homeNew1.jpg",
-          title: "Lorem ipsum dolor sit",
-          text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                  vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
-        },
-        {
-          id: 2,
-          image: "/images/homeNew2.jpg",
-          title: "Lorem ipsum dolor sit",
-          text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                  vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
-        },
-        {
-          id: 3,
-          image: "/images/homeNew3.jpg",
-          title: "Lorem ipsum dolor sit",
-          text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                  vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
-        },
-      ],
-      faNewsItems: [
-        {
-          id: 1,
-          image: "/images/homeNew1.jpg",
-          title: "لورم ایپسوم متن",
-          text: `لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است ...`,
-        },
-        {
-          id: 2,
-          image: "/images/homeNew2.jpg",
-          title: "لورم ایپسوم متن",
-          text: `لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است ...`,
-        },
-        {
-          id: 3,
-          image: "/images/homeNew3.jpg",
-          title: "لورم ایپسوم متن",
-          text: `لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است ...`,
-        },
-      ],
+
       video: false,
     };
   },

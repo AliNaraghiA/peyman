@@ -6,9 +6,7 @@
         <h3>Blog</h3>
         <h1>Every Things About Aluminium.</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas
-          purus viverra accumsan in nisl nisi Arcu cursus.
+          Articles and research in the field of aluminum industry
         </p>
       </div>
       <div class="lineDiv">
@@ -17,9 +15,6 @@
       <div class="blogList">
         <div
           class="d-flex justify-content-between blog"
-          v-for="item in blogItems"
-          :key="item.id"
-          :id="`blog${item.id}`"
         >
           <img :src="item.image" alt="" data-aos="zoom-in" />
           <div class="d-flex flex-column justify-content-between">
@@ -33,7 +28,7 @@
         <div
           class="pagination d-flex align-items-center justify-content-center"
         >
-          <span
+ <!--          <span
             class="num"
             @click="pagination = 1"
             :class="{ active: pagination == 1 }"
@@ -57,7 +52,7 @@
             @click="pagination = 4"
             :class="{ active: pagination == 4 }"
             >04</span
-          >
+          > -->
         </div>
       </div>
       <Footer lang="en" />
@@ -68,9 +63,7 @@
         <h3 class="mont">Blog</h3>
         <h1>همه چیز درباره ی آلومینیوم</h1>
         <p>
-          لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-          از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-          سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.
+          مقالات و تحقیقات در زمینه صنعت آلومینیوم
         </p>
       </div>
       <div class="scroll d-flex justify-content-end align-items-center">
@@ -128,6 +121,9 @@
   
   <script>
     import posts from '~/apollo/queries/posts.gql'
+    import postsFa from '~/apollo/queries/postsFa.gql'
+    import postsEn from '~/apollo/queries/postsEn.gql'
+
 
 export default {
   data() {

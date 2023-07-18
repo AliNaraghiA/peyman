@@ -212,7 +212,8 @@
 <script>
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import ALL_POSTS_QUERY from '~/apollo/queries/3lastposts.gql'
+import last3postsFa from '~/apollo/queries/last3postsFa.gql'
+
 
 
 export default {
@@ -266,7 +267,7 @@ export default {
 
   async asyncData({ app }) {
     const { data } = await app.apolloProvider.defaultClient.query({
-      query: ALL_POSTS_QUERY,
+      query: last3postsFa,
     });
 
     const posts = (data.posts && data.posts.edges) ? data.posts.edges : [];
@@ -402,32 +403,7 @@ export default {
           text: "محصولات تولید شده پس از مراحل بسته بندی و لیبل گذاری مطابق یک سیستم منظم و طبقه بندی شده و تا زمان ارسال و تحویل به مشتری در انبار نگهداری می گردند...",
         },
       ],
-      newsItems: [
-        {
-          id: 1,
-          image: "/images/homeNew1.jpg",
-          title: "Lorem ipsum dolor sit",
-          text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
-        },
-        {
-          id: 2,
-          image: "/images/homeNew2.jpg",
-          title: "Lorem ipsum dolor sit",
-          text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
-        },
-        {
-          id: 3,
-          image: "/images/homeNew3.jpg",
-          title: "Lorem ipsum dolor sit",
-          text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
-        },
-      ],
+
     
       video: false,
     };

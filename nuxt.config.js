@@ -1,6 +1,6 @@
 export default {
   ssr: true,
-  target: "server",
+  target: "ssr",
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {

@@ -11,16 +11,16 @@
         </p>
       </div>
 
-<!-- <div class="galleryList">
-  <div class="imageDiv" v-if="galleries.edges"  v-for=" (gallery, index) in galleries.nodes" :key="index" >
-    <div  >
-      <img :src="gallery.acfgallery.image.sourceUrl" :alt="gallery.acfgallery.image.altText" data-aos="zoom-in"  />
-        <NuxtLink :to="`/gallery/${gallery.slug}`">
-          <div class="text">{{gallery.acfgallery.title}}</div>
-        </NuxtLink>         
-   </div>
-  </div>
-</div> -->
+ <div class="galleryList">
+  <div class="imageDiv" v-if="galleries.edges" v-for=" (gallery, index) in galleries.edges" :key="index" >
+          <div  >
+            <img :src="gallery.node.acfgallery.image.sourceUrl" :alt="gallery.node.acfgallery.image.altText" data-aos="zoom-in"  />
+              <NuxtLink :to="`/media/${gallery.node.slug}`">
+                <div class="text">{{gallery.node.acfgallery.englishtitle}}</div>
+              </NuxtLink>         
+         </div>
+        </div>
+</div> 
       <Footer lang="en" />
     </div>
     <div class="faGallery irancell" v-else>
@@ -51,7 +51,6 @@
 </template>
 
 <script>
-import galleries from '~/apollo/queries/galleries.gql' 
 const GALLERIES_QUERY = `
   query Galleries {
     galleries {
@@ -62,6 +61,7 @@ const GALLERIES_QUERY = `
           slug
           acfgallery {
             title
+            englishtitle
             image {
               sourceUrl
               altText
@@ -102,6 +102,7 @@ export default {
     const { data } = await response.json();
     return {
       galleries: data.galleries,
+      engall: data.galleries,
     };
   },
   watch: {

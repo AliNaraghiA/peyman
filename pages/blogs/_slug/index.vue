@@ -7,9 +7,7 @@
           <h3>Blog</h3>
           <h1>Every Things About Aluminium.</h1>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas
-            purus viverra accumsan in nisl nisi Arcu cursus.
+            Articles and research in the field of aluminum industry
           </p>
         </div>
         <div class="lineDiv">
@@ -18,9 +16,7 @@
         <div class="blogList">
           <div
             class="d-flex justify-content-between blog"
-            v-for="item in blogItems"
-            :key="item.id"
-            :id="`blog${item.id}`"
+
           >
             <img :src="post.featuredImage.node.sourceUrl" alt="post.featuredImage.node.altText" data-aos="zoom-in" />
             <div class="d-flex flex-column justify-content-between">
@@ -69,9 +65,7 @@
           <h3 class="mont">Blog</h3>
           <h1>همه چیز درباره ی آلومینیوم</h1>
           <p>
-            لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
-            از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و
-            سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز.
+            مقالات و تحقیقات در زمینه صنعت آلومینیوم
           </p>
         </div>
         <div class="scroll d-flex justify-content-end align-items-center">
@@ -147,26 +141,6 @@ import gql from 'graphql-tag';
       return {
         language: "",
         pagination: 1,
-        blogItems: [
-          {
-            id: 1,
-            image: "/images/homeNew1.jpg",
-            title: "Lorem ipsum dolor sit",
-            text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua Egestas purus viverra accumsan in nisl nisi Arcu cursus
-                  vitae congue mauris rhoncus aenean vel elit scelerisque ...`,
-          },
-  
-        ],
-/*         faBlogItems: [
-          {
-            id: 1,
-            image: "/images/homeNew1.jpg",
-            title: "لورم ایپسوم متن",
-            text: `لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است ...`,
-          },
-  
-        ], */
       };
     },
     mounted() {
@@ -214,6 +188,7 @@ import gql from 'graphql-tag';
           };
         });
     },
+
 };
   </Script>
 
