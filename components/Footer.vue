@@ -78,7 +78,9 @@
         <div class="d-flex">
           <div class="whiteCircle"><img src="/icons/twitter.svg" alt="" /></div>
           <div class="whiteCircle">
-            <img src="/icons/instagram.svg" alt="" />
+            <NuxtLink to="https://www.instagram.com/ppa_co/" no-rel>
+                <img src="/icons/instagram.svg" alt="" />
+            </NuxtLink>
           </div>
           <div class="whiteCircle"><img src="/icons/in.svg" alt="" /></div>
         </div>
