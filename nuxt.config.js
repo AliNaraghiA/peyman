@@ -59,7 +59,7 @@ export default {
   apollo: {
     clientConfigs: {
       default: {
-        httpEndpoint: 'https://backend.ravakdemo.ir/graphql',
+        httpEndpoint: 'https://backend.ppa-co.ir/graphql',
       },
     },
   },
