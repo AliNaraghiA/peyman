@@ -98,7 +98,7 @@ export default {
     },
     async submitForm() {
       const apiUrl =
-        "https://backend.ravakdemo.ir/wp-json/contact-form-7/v1/contact-forms/388/feedback";
+        "https://backend.ppa-co.ir/wp-json/contact-form-7/v1/contact-forms/388/feedback";
 
       const formData = new FormData();
       formData.append("your-name", this.name);
