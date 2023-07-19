@@ -15,8 +15,11 @@
             </div>
           </div>
           <button class="effectBtn">
-            <img src="/icons/blackCall.svg" class="blackCallIcon" />
-            <span>Get In Touch</span>
+            <NuxtLink to="/contactUs">
+              <img src="/icons/blackCall.svg" class="blackCallIcon" />
+             <span>Get In Touch</span>
+            </NuxtLink>            
+
           </button>
         </div>
       </div>
@@ -31,7 +34,9 @@
             tools for the production of aluminum products ...
           </p>
           <button class="effectBtn">
+             <NuxtLink to="/aboutUs">
             <span>Read More</span>
+            </NuxtLink> 
           </button>
         </div>
         <div class="col animation">
@@ -73,7 +78,9 @@
               Exclusive Products is a one-stop solution provider for all your aluminum product needs. They offer a wide range of exclusive products that are manufactured with the highest quality materials and can be customized to meet your specific requirements. With their expertise in product design, mold-making, casting, and production, they provide comprehensive solutions for every stage of your project. They also provide consultation services to help you make informed decisions about casting and manufacturing processes.
            </p>
             <button class="effectBtn">
+                            <NuxtLink to="/exclusive">
               <span> More Info </span>
+              </NuxtLink>
             </button>
           </div>
           <img src="/images/homeProduct1.png" alt="" />
@@ -99,7 +106,9 @@
             <p>
               Aluminum with its silvery color and low specific weight has a very high application in industries. Based on the different properties of products and their uses, aluminum profiles can be produced in various dimensions and shapes. Aluminum profile is one of the industrial products that due to its properties such as lightness, strength, corrosion and heat resistance, flexibility and ease of processing, is used in many industries. These profiles can be used for making various industrial parts, interior of buildings, doors, windows, and even inside vehicles among other applications.            </p>
             <button class="effectBtn">
+                            <NuxtLink to="/industrial">
               <span> More Info </span>
+              </NuxtLink>
             </button>
           </div>
           <img src="/images/homeProduct3.png" alt="" />
@@ -112,7 +121,9 @@
             <p>
               Today, one of the most diverse and commonly used aluminum parts in the construction industry is ingots and billets. Due to its resistance to corrosion and oxidation, aluminum is widely used for producing ingots and billets. These raw materials are used in various industrial applications with a primary focus on the manufacturing of aluminum profiles. Ingots and billets are produced through a process of melting and casting, which results in a high-quality metal with excellent properties such as high strength, durability, and malleability.            </p>
             <button class="effectBtn">
+                            <NuxtLink to="/construction">
               <span> More Info </span>
+              </NuxtLink>
             </button>
           </div>
           <img src="/images/homeProduct4.png" alt="" />
@@ -122,7 +133,9 @@
       <div class="units">
         <div class="unitsHead">
           <h2>Units Of Our Company.</h2>
-          <button class="effectBtn"><span>Read More</span></button>
+          <NuxtLink to="/enUnits">
+            <button class="effectBtn"><span>Read More</span></button>
+          </NuxtLink>  
         </div>
         <div class="items d-flex justify-content-around flex-wrap">
           <div
@@ -153,7 +166,9 @@
           <h2>News.</h2>
           <p>We share the news related to the aluminum industry with you</p>
           <div class="button effectBtn">
-            <span> All News </span>
+            <NuxtLink to="/blogs">
+              <span> All News </span>
+          </NuxtLink>  
           </div>
         </div>
         <div class="newsList">

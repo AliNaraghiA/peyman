@@ -39,10 +39,9 @@
               <img src="/icons/twitter.svg" alt="" />
             </div>
             <div class="whiteCircle">
-              <NuxtLink to="https://www.instagram.com/ppa_co/" no-rel>
-               <img src="/icons/instagram.svg" alt="" />
-             </NuxtLink>
-            </div>
+              <a href="https://www.instagram.com/ppa_co/" target="_blank">
+    <img src="/icons/instagram.svg" alt="Instagram" />
+  </a>            </div>
             <div class="whiteCircle"><img src="/icons/in.svg" alt="" /></div>
           </div>
         </div>
@@ -61,6 +60,24 @@
             <input type="email" name="email" v-model="email"  placeholder="Email  *" />
           </div>
           <textarea  name="message" v-model="message"  placeholder="Message  *" rows="3"></textarea>   
+<!--           <el-upload
+           ref="attachment"
+           @change="handleAttachment"
+            class="upload-demo"
+            drag
+            action="https://jsonplaceholder.typicode.com/posts/"
+            :on-preview="handlePreview"
+            :on-remove="handleRemove"
+            :file-list="fileList"
+            multiple
+          >
+          <div class="el-upload__text"  >Drop file here or CLICK TO UPLOAD</div>
+          </el-upload>
+              <div class="size"> Attachment cannot exceed <span> 5 MB </span></div>  -->
+
+              
+
+
               <input type="file" ref="attachment" @change="handleAttachment" />
                      <div class="size">Attachment cannot exceed <span> 5 MB </span></div> 
           <button type="submit" class="effectBtn">
@@ -113,10 +130,9 @@
               <img src="/icons/twitter.svg" alt="" />
             </div>
             <div class="whiteCircle">
-              <NuxtLink to="https://www.instagram.com/ppa_co/" no-rel>
-               <img src="/icons/instagram.svg" alt="" />
-             </NuxtLink>
-            </div>
+              <a href="https://www.instagram.com/ppa_co/" target="_blank">
+    <img src="/icons/instagram.svg" alt="Instagram" />
+  </a>            </div>
             <div class="whiteCircle"><img src="/icons/in.svg" alt="" /></div>
           </div>
         </div>

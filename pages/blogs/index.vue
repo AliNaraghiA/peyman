@@ -1,63 +1,7 @@
 <template>
   <div class="blogs">
-    <div class="enBlogs mont" v-if="language == 'en'">
-      <Header lang="eng" v-if='change' @change="change" />
-      <div class="topDiv">
-        <h3>Blog</h3>
-        <h1>Every Things About Aluminium.</h1>
-        <p>
-          Articles and research in the field of aluminum industry
-        </p>
-      </div>
-      <div class="lineDiv">
-        <Lines myVw="1920" myVh="360" />
-      </div>
-      <div class="blogList">
-        <div
-          class="d-flex justify-content-between blog"
-        >
-          <img :src="item.image" alt="" data-aos="zoom-in" />
-          <div class="d-flex flex-column justify-content-between">
-            <div class="titleAndText">
-              <h3 class="title">{{ item.title }}</h3>
-              <p class="text">{{ item.text }}</p>
-            </div>
-            <div class="number">0{{ item.id }}.</div>
-          </div>
-        </div>
-        <div
-          class="pagination d-flex align-items-center justify-content-center"
-        >
- <!--          <span
-            class="num"
-            @click="pagination = 1"
-            :class="{ active: pagination == 1 }"
-            >01</span
-          >
-          <span class="whiteLine"></span>
-          <span
-            class="num"
-            @click="pagination = 2"
-            :class="{ active: pagination == 2 }"
-            >02</span
-          >
-          <span
-            class="num"
-            @click="pagination = 3"
-            :class="{ active: pagination == 3 }"
-            >03</span
-          >
-          <span
-            class="num"
-            @click="pagination = 4"
-            :class="{ active: pagination == 4 }"
-            >04</span
-          > -->
-        </div>
-      </div>
-      <Footer lang="en" />
-    </div>
-    <div class="faBlogs irancell" v-else>
+
+    <div class="faBlogs irancell">
       <Header lang="fa" v-if='change' @change="change" />
       <div class="topDiv">
         <h3 class="mont">Blog</h3>
@@ -76,7 +20,7 @@
         <Lines myVw="1920" myVh="100" />
       </div>
       <div class="blogList">
-        <div
+         <div
           class="d-flex justify-content-between blog"
           v-for="post  in posts.edges"
           :key="post.node.databaseId"
@@ -92,7 +36,7 @@
             </div>
             <div class="number mont" > {{post.node.databaseId}} </div>
           </div>
-        </div>
+        </div> 
 <!--           <button @click="previousPage" :disabled="page === 1">Previous</button>
            <button @click="nextPage" :disabled="!hasNextPage">Next</button> -->
            <div v-if='nextPage'>
@@ -120,9 +64,7 @@
 </template>
   
   <script>
-    import posts from '~/apollo/queries/posts.gql'
     import postsFa from '~/apollo/queries/postsFa.gql'
-    import postsEn from '~/apollo/queries/postsEn.gql'
 
 
 export default {
@@ -143,7 +85,7 @@ export default {
     //main
     apollo: {
 posts: {
-  query: posts,
+  query: postsFa,
   variables() {
     return {
       first: this.pageSize,
@@ -155,10 +97,8 @@ posts: {
     this.endCursor = data.posts.pageInfo.endCursor;
   },
 },
-},
+}, 
 
-
-  
   mounted() {
     this.language = this.$store.state.lang;
   },

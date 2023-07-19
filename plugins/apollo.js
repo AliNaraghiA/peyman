@@ -6,7 +6,7 @@ import gql from 'graphql-tag'
 
 export default ({ app }) => {
   const httpLink = new HttpLink({
-    uri: 'https://backend.ravakdemo.ir/graphql',
+    uri: 'https://backend.ppa-co.ir/graphql',
   })
 
   const authLink = new ApolloLink((operation, forward) => {

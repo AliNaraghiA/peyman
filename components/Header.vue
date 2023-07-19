@@ -242,7 +242,14 @@ export default {
       } else if (this.$route.path == "/enProducts") {
         this.$router.push("products");
         this.$emit("change");
-      } else {
+      }else if (this.$route.path == "/enBlogs") {
+        this.$router.push("blogs");
+        this.$emit("change");
+      }else if (this.$route.path == "/blogs") {
+        this.$router.push("enBlogs");
+        this.$emit("change");
+      }
+      else {
         this.$emit("change");
       }
       this.language = this.$store.state.lang;

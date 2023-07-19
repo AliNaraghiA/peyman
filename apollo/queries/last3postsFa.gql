@@ -1,7 +1,7 @@
 query last3postsFa {
   posts(
     first: 3
-    where: {orderby: {field: DATE, order: DESC}, categoryNotIn: [5], categoryIn: [6]}
+    where: {orderby: {field: DATE, order: DESC}, categoryNotIn: [6], categoryIn: [5]}
   ) {
     edges {
       node {

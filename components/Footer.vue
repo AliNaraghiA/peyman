@@ -34,7 +34,9 @@
         <div class="d-flex">
           <div class="whiteCircle"><img src="/icons/twitter.svg" alt="" /></div>
           <div class="whiteCircle">
-            <img src="/icons/instagram.svg" alt="" />
+            <a href="https://www.instagram.com/ppa_co/" target="_blank">
+    <img src="/icons/instagram.svg" alt="Instagram" />
+  </a>
           </div>
           <div class="whiteCircle"><img src="/icons/in.svg" alt="" /></div>
         </div>
@@ -78,9 +80,9 @@
         <div class="d-flex">
           <div class="whiteCircle"><img src="/icons/twitter.svg" alt="" /></div>
           <div class="whiteCircle">
-            <NuxtLink to="https://www.instagram.com/ppa_co/" no-rel>
-                <img src="/icons/instagram.svg" alt="" />
-            </NuxtLink>
+            <a href="https://www.instagram.com/ppa_co/" target="_blank">
+    <img src="/icons/instagram.svg" alt="Instagram" />
+  </a>
           </div>
           <div class="whiteCircle"><img src="/icons/in.svg" alt="" /></div>
         </div>

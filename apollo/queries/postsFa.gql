@@ -1,5 +1,5 @@
 query PostsFa($first: Int, $after: String) {
-  posts(first: $first, after: $after ,where:{categoryNotIn:[5]  categoryIn:[6]} ){
+  posts(first: $first, after: $after ,where:{categoryNotIn:[6]  categoryIn:[5]} ){
     pageInfo {
       endCursor
       hasNextPage

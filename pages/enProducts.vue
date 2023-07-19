@@ -6,9 +6,7 @@
         <h3>products</h3>
         <h1>Product Of Our Company.</h1>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua Egestas
-          purus viverra accumsan in nisl nisi Arcu cursus.
+          Peyman Asia Aluminum Profile Company offers a range of high-quality aluminum products, including profiles, sections, pipes, railings, and aluminum window and door systems. These products are manufactured using top-quality materials and state-of-the-art technology, resulting in exceptional durability and strength. With a wide variety of designs available, customers can choose a product that suits their needs. Due to their high quality and compliance with international standards, Peyman Asia Aluminum Profile products have gained popularity both domestically and internationally.
         </p>
       </div>
       <div class="lineDiv">
@@ -21,8 +19,7 @@
           <div class="texts">
             <h2>Exclusive products<span>.</span></h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna
+              Exclusive Products is a one-stop solution provider for all your aluminum product needs. They offer a wide range of exclusive products that are manufactured with the highest quality materials and can be customized to meet your specific requirements. 
             </p>
             <button class="effectBtn">
               <span> More Info </span>
@@ -36,9 +33,8 @@
           <div class="texts">
             <h2>General products<span>.</span></h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna
-            </p>
+              General Products is a reliable and diverse collection of items that cater to a wide range of needs. From household essentials to electronics, clothing to accessories, General Products offers a comprehensive selection of high-quality products at competitive prices.
+                     </p>
             <button class="effectBtn">
               <span> More Info </span>
             </button>
@@ -51,9 +47,8 @@
           <div class="texts">
             <h2>Industrial products<span>.</span></h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna
-            </p>
+              Aluminum with its silvery color and low specific weight has a very high application in industries. Based on the different properties of products and their uses, aluminum profiles can be produced in various dimensions and shapes. 
+               </p>
             <button class="effectBtn">
               <span> More Info </span>
             </button>
@@ -66,9 +61,8 @@
           <div class="texts">
             <h2>Ingots & billets<span>.</span></h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna
-            </p>
+              Today, one of the most diverse and commonly used aluminum parts in the construction industry is ingots and billets. Due to its resistance to corrosion and oxidation, aluminum is widely used for producing ingots and billets. 
+               </p>
             <button class="effectBtn">
               <span> More Info </span>
             </button>

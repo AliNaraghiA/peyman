@@ -8,7 +8,9 @@
         <div class="d-flex justify-content-between">
           <button class="effectBtn">
             <img src="/icons/blackCall.svg" class="blackCallIcon" />
-            <span>تماس با ما</span>
+            <NuxtLink to="/contactUs">
+              <span>تماس با ما</span>
+            </NuxtLink>
           </button>
           <div class="scroll d-flex justify-content-end align-items-center">
             <div class="scrollIcon">
@@ -32,7 +34,9 @@
             کرد. محصولات آلومینیومی ...
           </p>
           <button class="effectBtn">
-            <span>بیشتر بخوانید</span>
+            <NuxtLink to="/aboutUs">
+              <span>بیشتر بخوانید</span>
+            </NuxtLink>
           </button>
         </div>
         <div class="col animation">
@@ -80,7 +84,9 @@
               می‌توان ...
             </p>
             <button class="effectBtn">
-              <span>اطلاعات بیشتر</span>
+              <NuxtLink to="/industrial">
+                <span>اطلاعات بیشتر</span>
+              </NuxtLink>
             </button>
           </div>
           <img src="/images/faHomeProduct1.png" alt="" />
@@ -96,7 +102,9 @@
               شدن...
             </p>
             <button class="effectBtn">
-              <span>اطلاعات بیشتر</span>
+              <NuxtLink to="/construction">
+                <span>اطلاعات بیشتر</span>
+              </NuxtLink>
             </button>
           </div>
           <img src="/images/faHomeProduct2.png" alt="" />
@@ -111,7 +119,9 @@
               گری و تولید .
             </p>
             <button class="effectBtn">
-              <span> اطلاعات بیشتر </span>
+              <NuxtLink to="/exclusive">
+                <span>اطلاعات بیشتر</span>
+              </NuxtLink>
             </button>
           </div>
           <img src="/images/faHomeProduct3.png" alt="" />
@@ -127,7 +137,9 @@
             </div>
             <h2 class="mont">.Units Of Our Company</h2>
           </div>
-          <button class="effectBtn"><span>بیشتر بخوانید</span></button>
+          <NuxtLink to="/units">
+            <button class="effectBtn"><span>بیشتر بخوانید</span></button>
+          </NuxtLink>         
         </div>
         <div class="items d-flex justify-content-around flex-wrap">
           <div
@@ -168,11 +180,13 @@
             </div>
             <div class="enNew">
               <h2 class="mont">.News</h2>
-              <p class="mont">Lorem ipsum dolor sit</p>
+              <p class="mont">Peyman Profile</p>
             </div>
           </div>
           <div class="button effectBtn">
-            <span> All News </span>
+            <NuxtLink to="/blogs">
+              <span> All News </span>
+          </NuxtLink>   
           </div>
         </div>
          <div class="newsList">
